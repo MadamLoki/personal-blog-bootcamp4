@@ -4,13 +4,16 @@ Homework Module 4 Challenge - Personal Blog
 
 ## User Story
 
-```AS A marketing student
+```markdown
+AS A marketing student
 I WANT a personal blog
-SO THAT I can showcase my thoughts and experiences.```
+SO THAT I can showcase my thoughts and experiences.
+```
 
 ## Acceptance Criteria
 
-```GIVEN a personal blog
+```markdown
+GIVEN a personal blog
 WHEN I load the app
 THEN I am presented with the landing page containing a form with labels and inputs for username, blog title, and blog content
 WHEN I try to submit a form without a username, title, or content
@@ -30,7 +33,8 @@ THEN I am presented with a list of blog posts that are pulled from local storage
 WHEN I view local storage
 THEN I am presented with a JSON array of blog post objects, each including the post author's username, title of the post, and post's content
 WHEN I take a closer look at a single blog entry in the list
-THEN I can see the title, the content, and the author of the post```
+THEN I can see the title, the content, and the author of the post
+```
 
 # Grading Requirements
 
@@ -86,4 +90,3 @@ Rendered blog posts must include the author's username, and the post's title and
 If no blog posts are found in localStorage, display a message that states: "No Blog posts yet...". (10 pts)
 
 Redirect the user to the landing page when the "Back" button is clicked. (5 pts)
-

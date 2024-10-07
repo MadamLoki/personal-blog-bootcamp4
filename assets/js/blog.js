@@ -9,3 +9,20 @@
 // TO DO: Call the `renderBlogList` function
 
 // TO DO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
+
+document.addEventListener('DOMContentLoaded', () => {
+
+const backButton = document.querySelector('.back-button');
+    if (backButton) {
+        backButton.addEventListener('click', () => redirectIndex('./index.html'));
+    } else {
+        console.error('Back button not found');
+}
+
+const blogButton = document.querySelector('.blog-button');
+    if (blogButton) {
+        blogButton.addEventListener('click', () => redirectBlog('./blog.html'));
+    } else {
+        console.error('Blog button not found');
+    }
+});

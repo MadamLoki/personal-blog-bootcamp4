@@ -48,15 +48,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // TO DO: Create a function called `readLocalStorage` that reads from local storage and returns the data. If no data exists, return an empty array.
 
+function readLocalStorage(key) {
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : [];
+    
+}
+console.log('data', readLocalStorage('blogData'));
 
 // TO DO: Create a function called `storeLocalStorage` that takes a given object and saves the new data to the existing blog data in local storage.
 
+function storeLocalStorage(key, newData) {
+    const existingData = readLocalStorage(key);
+    existingData.push(newData);
+    localStorage.setItem(key, JSON.stringify(existingData));
+}
+console.log('data', storeLocalStorage('blogData', {title: 'test', content: 'test'}));
 
 // Use the following function whenever you need to redirect to a different page
 
 let redirectURL = './index.html';
 
-const redirectPage = function (url) {
+const redirectIndex = function (url) {
     redirectURL = url;
     location.assign(url);
+};
+
+let redirectBlogURL = './blog.html';
+
+const redirectBlog = function (url) {
+    redirectBlogURL = url;
+    location.assign(url);
+    console.log('redirecting to blog');
 };

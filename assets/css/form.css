@@ -1,12 +1,8 @@
-*{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
 /* Form section styling */
 .formSection {
     align-content: space-around;
-    max-width: 100%;
-    width: 400px;
+    max-width: 500px;
+    width: 100%;
     padding: 20px;
     background-color: #dadada;
     border-radius: 8px;
@@ -39,11 +35,13 @@
 
 #content {
     height: 150px;
+    resize: vertical;
 }
 
 .formSection input[type="text"]:focus,
 .formSection textarea:focus {
     border-color: #000000;
+    outline: none;
 }
 
 /* Form labels */
@@ -123,7 +121,6 @@ label.dark-mode {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .formSection {
-        width: 100%;
         padding: 15px;
     }
 }

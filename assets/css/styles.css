@@ -129,7 +129,7 @@ body.dark-mode {
 }
 
 .separator {
-    height: 110vh;
+    height: 100vh;
     border-left: black 7px double;
     margin: 0 40px;
 }
@@ -185,11 +185,14 @@ body.dark-mode {
 
 /* Footer styles */
 footer {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     border-top: black 7px double;
-    margin-top: auto;  /* Push footer to bottom */
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .dark-mode footer {

@@ -102,12 +102,79 @@ body.dark-mode {
 }
 
 /* Main content styles */
+main {
+    flex: auto;
+    padding: 20px;
+    display:inline-block;
+    
+}
+
+.blog-post {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.post-title {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.post-content {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Dark mode styles */
+main.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .blog-post {
+    background-color: #444;
+    border-color: #666;
+}
+
+.dark-mode .post-title {
+    border-bottom-color: #666;
+}
+
+.dark-mode .post-meta {
+    color: #ccc;
+}
+
+/* No posts message */
+.no-posts {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.dark-mode .no-posts {
+    background-color: #444;
+    border-color: #666;
+}
+
 
 /* Footer styles */
 footer {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    margin-top: auto;  /* Push footer to bottom */
+    border-top: black 7px double;
+    margin-top: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 

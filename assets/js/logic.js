@@ -62,7 +62,9 @@ function storeLocalStorage(key, newData) {
     existingData.push(newData);
     localStorage.setItem(key, JSON.stringify(existingData));
 }
-console.log('data', storeLocalStorage('blogData', {title: 'test', content: 'test'}));
+
+/* console.log('data', storeLocalStorage('blogData', {title: 'test', content: 'test'}) */
+
 
 // Use the following function whenever you need to redirect to a different page
 

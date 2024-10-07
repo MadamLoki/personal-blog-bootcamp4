@@ -4,12 +4,16 @@
 
 /* Form section styling */
 .formSection {
+    align-content: space-around;
     max-width: 100%;
     width: 400px;
     padding: 20px;
     background-color: #dadada;
     border-radius: 8px;
     box-shadow: 0 0 10px #00000052;
+    flex: auto;
+    margin: 30px;
+    height: fit-content;
 }
 
 .formSection h3 {
@@ -17,6 +21,7 @@
     margin-bottom: 20px;
     color: #000000;
     font-size: 24px;
+    align-self: center;
 }
 
 /* Form input fields */
@@ -30,6 +35,10 @@
     box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s ease;
+}
+
+#content {
+    height: 150px;
 }
 
 .formSection input[type="text"]:focus,

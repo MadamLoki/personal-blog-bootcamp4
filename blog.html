@@ -9,18 +9,17 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/blog.css" />
-
-    <script defer src="./assets/js/logic.js" type="text/javascript"></script>
-    <script defer src="./assets/js/blog.js" type="text/javascript"></script>
 </head>
 
 <body>
 
     <!-- TO DO: Create header, main, and footer elements -->
     <header>
-        <h3>Full Stack Blog</h3>
-        <toggle id="darkmode"></toggle>
-        <button id="back">Back</button>
+        <h3>First Blog</h3>
+        <button id="back" class="back-button"> ⬅ Back </button>
+        <button id="toggle" class="toggle-button">
+                <img src="./assets/images/sun_icon.png" alt="toggle light/dark mode" data-state="light">
+        </button>
     </header>
     <main>
         <!-- TO DO: Create blog post elements -->
@@ -33,6 +32,8 @@
         ©️ Made with 💖 by Sara (MadamLoki)
     </footer>
 
+    <script defer src="./assets/js/logic.js" type="text/javascript"></script>
+    <script defer src="./assets/js/blog.js" type="text/javascript"></script>
 </body>
 
 </html>

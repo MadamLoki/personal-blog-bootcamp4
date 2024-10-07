@@ -9,3 +9,11 @@
 // TO DO: Call the `renderBlogList` function
 
 // TO DO: Redirect to the home page using the `redirectPage` function found in logic.js when the back button is clicked
+
+
+
+// Call the renderBlogList function when the page loads
+document.addEventListener('DOMContentLoaded', renderBlogList);
+
+// Redirect to the home page when the back button is clicked
+backButton.addEventListener('click', () => redirectPage('index.html'));

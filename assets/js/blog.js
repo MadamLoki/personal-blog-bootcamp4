@@ -35,14 +35,19 @@ function renderBlogList() {
     // Read blog posts from local storage
     const blogPosts = JSON.parse(localStorage.getItem('blogData')) || [];
 
+        // Sort blog posts by date, newest first
+        blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
     if (blogPosts.length === 0) {
         displayNoPosts();
     } else {
+        // Create and append blog post elements for each post in storage
         blogPosts.forEach(post => {
             const article = createElement('article', 'blog-post', null, mainElement);
             createElement('h2', 'post-title', post.title, article);
             createElement('p', 'post-content', post.content, article);
-            createElement('p', 'post-meta', `Posted by: ${post.userName}`, article);
+            createElement('p', 'post-meta', `Posted by: ${post.userName} on ${new Date(post.date).toLocaleString()}`, article);
+
         });
     }
 }

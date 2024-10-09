@@ -1,180 +1,107 @@
-* {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    box-sizing: border-box;
+/*
+Blog Styles
+*/
+
+/*
+Tags
+*/
+a {
+    text-decoration: none;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-    border-bottom: black 7px double;
-}
-
-.dark-mode header {
-    border-bottom: white 7px double;
-}
-
-header h3 {
-    font-size: 24px;
-    margin: 0;
-}
-
-.header-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.back-button {
-    color: white;
-    width: 80px;
-    height: 40px;
-    background-color: #000000;
-    border: none;
+article {
+    flex: 1 1 50%;
+    border: 2px solid;
     border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    margin-right: 10px;
+    padding: 1rem;
+    position: relative;
 }
 
-.back-button:hover {
-    background-color: #333333;
-}
-
-/* Dark mode styles for back button */
-.dark-mode .back-button {
-    background-color: #464646;
-    color: #ffffff;
-    box-shadow: 0 2px 4px #ffffff1a;
-}
-
-.dark-mode .back-button:hover {
-    background-color: #4a4a4a;
-    box-shadow: 0 4px 8px #ffffff33;
-}
-
-.dark-mode .back-button:active {
-    box-shadow: 0 1px 2px #ffffff1a;
-}
-
-/* Toggle button styles */
-.toggle-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-}
-
-.toggle-button img {
-    width: 60%;
-    height: 60%;
-    display: block;
-}
-
-
-/* Light and dark mode styles */
-body.light-mode {
-    background-color: white;
-    color: black;
-}
-
-body.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-/* Main content styles */
-main {
-    flex: auto;
-    padding: 20px;
-    display:inline-block;
-    
-}
-
-.blog-post {
-    background-color: #ffffff;
-    border: 3px solid #000000;
-    margin-bottom: 20px;
-    padding: 15px;
-}
-
-.post-title {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.post-content {
+article blockquote {
+    margin: 1rem;
+    margin-bottom: 2rem;
     font-style: italic;
-    margin-bottom: 10px;
 }
 
-.post-meta {
-    font-size: 14px;
-    color: #666;
+article h2 {
+    text-transform: capitalize;
+    border-bottom: thin solid;
 }
 
-/* Dark mode styles */
-main.dark-mode {
-    background-color: #333;
-    color: white;
+article p {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    opacity: .75;
 }
 
-.dark-mode .blog-post {
-    background-color: #444;
-    border-color: #666;
-}
-
-.dark-mode .post-title {
-    border-bottom-color: #666;
-}
-
-.dark-mode .post-meta {
-    color: #ccc;
-}
-
-/* No posts message */
-.no-posts {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-}
-
-.dark-mode .no-posts {
-    background-color: #444;
-    border-color: #666;
-}
-
-
-/* Footer styles */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-top: black 7px double;
-    margin-top: auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    position: fixed;
+    inset: 0;
+    top: calc(100% - 12rem);
 }
 
+li {
+    margin: 1rem;
+}
+
+main {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1rem;
+    height: calc(100vh - 18rem);
+    overflow-y: scroll;
+    justify-content: flex-start;
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+    Classes
+*/
+.card {
+    flex: 1 1 50%;
+    border: 2px solid;
+    border-radius: 4px;
+}
+
+.dark a {
+    color: var(--light);
+}
+
+.light footer {
+    border-top: double 1rem;
+}
+
+.light a {
+    color: var(--dark);
+}
+
+/*
+    IDs
+*/
+#back {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    border: groove black;
+    background-color: var(--dark-accent);
+    color: var(--light);
+}
+
+
+#back:active {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+    background-color: var(--dark-accent);
+}
+
+#back:hover {
+    border-style: inset;
+    background-color: var(--dark-accent-action);
+}
+
+#love {
+    text-align: center;
+}

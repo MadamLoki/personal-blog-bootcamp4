@@ -7,19 +7,19 @@ function handleFormSubmission(event) {
     event.preventDefault();
 
     // Get form input values
-    const userName = document.getElementById('username')
+    const username = document.getElementById('username')
     const title = document.getElementById('title')
     const content = document.getElementById('content')
 
     // Check if all fields are filled
-    if (!userName.value || !title.value || !content.value) {
+    if (!username.value || !title.value || !content.value) {
         errorMessage.textContent = 'Please fill out all fields';
         return;
     }
 
     // Create blog post object
     const blogPost = {
-        userName: userName.value,
+        username: username.value, // Changed from username to username
         title: title.value,
         content: content.value,
         date: new Date().toISOString()
@@ -50,7 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', handleFormSubmission);
 });
 
-// Add blog button functionality
+// Function to store data in local storage
+function storeLocalStorage(key, newData) {
+    const existingData = JSON.parse(localStorage.getItem(key)) || [];
+    existingData.push(newData);
+    localStorage.setItem(key, JSON.stringify(existingData));
+}
+
+/* // Add blog button functionality
 const blogButton = document.querySelector('.blog-button');
 if (blogButton) {
     blogButton.addEventListener('click', () => {
@@ -58,4 +65,4 @@ if (blogButton) {
     });
 } else {
     console.error('Blog button not found');
-}
+} */

@@ -54,7 +54,7 @@ header h3 {
   align-items: center;
 }
 
-.blog-button, .toggle-button {
+.toggle-button {
   background: none;
   color: var(--dark);
   border: none;
@@ -63,7 +63,7 @@ header h3 {
   margin-left: 10px;
 }
 
-.back-button, .blog-button {
+.back-button {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   margin-right: 1rem;
@@ -72,12 +72,12 @@ header h3 {
   color: var(--dark);
 }
 
-.back-button:active, .blog-button:active {
+.back-button:active {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
   background-color: var(--dark-accent);
 }
 
-.back-button:hover, .blog-button:hover {
+.back-button:hover {
   border-style: inset;
   background-color: var(--dark-accent-action);
 }

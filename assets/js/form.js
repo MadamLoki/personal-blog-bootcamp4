@@ -14,6 +14,7 @@ function handleFormSubmission(event) {
     // Check if all fields are filled
     if (!username.value || !title.value || !content.value) {
         errorMessage.textContent = 'Please fill out all fields';
+        alert("All fields are required!");
         return;
     }
 
@@ -56,13 +57,3 @@ function storeLocalStorage(key, newData) {
     existingData.push(newData);
     localStorage.setItem(key, JSON.stringify(existingData));
 }
-
-/* // Add blog button functionality
-const blogButton = document.querySelector('.blog-button');
-if (blogButton) {
-    blogButton.addEventListener('click', () => {
-        window.location.href = 'blog.html';
-    });
-} else {
-    console.error('Blog button not found');
-} */
